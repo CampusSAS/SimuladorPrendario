@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Prendario | Luciano Lopresti</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-card">
+        <div class="top-tagline">
+            Aprobación en el acto
+        </div>
+        <header>
+            <div class="logo-wrapper">
+                <img src="./public/LOGO.png" alt="Logo" class="logo-img">
+            </div>
+            <h1>Créditos<span>Prendarios</span></h1>
+        </header>
+
+        <form id="loan-form">
+            <div class="input-box">
+                <label>Monto del Crédito</label>
+                <input type="text" id="monto" placeholder="$ 0,00" required>
+            </div>
+            <div class="input-box">
+                <label>Cantidad de Cuotas</label>
+                <select id="cuotas" required>
+                    <option value="" disabled selected>Selecciona cantidad</option>
+                    </select>
+            </div>
+            <div class="input-box">
+                <label>Año del Vehículo</label>
+                <select id="anio-vehiculo" required>
+                    <option value="" disabled selected>Selecciona el año</option>
+                </select>
+            </div>
+            <button type="button" id="calc-btn" class="shiny-btn">Calcular Cuota</button>
+            
+        </form>
+
+        <div id="result-container" class="hidden">
+            <div class="result-item">
+                <p>Importe de cuota:</p>
+                <h2 id="final-price">$ 0,00</h2>
+            </div>
+            <div class="result-item admin-costs">
+                <p>Gasto administrativo:</p>
+                <small>(código de inscripción + formularios + escribanía + gasto de gestoría)</small>
+                <h3 id="admin-price">$ 0,00</h3>
+
+            <div class="contact-section">
+                    <p class="contact-text">¿Necesitás asesoramiento personalizado?</p>
+                        <div class="contact-info">
+                        <div class="contact-item">
+                    <strong>WhatsApp:</strong> <span>+54 2616555947</span>
+                </div>
+            <div class="contact-item">
+            <strong>Atención:</strong> <span>Lunes a Viernes 9 a 17hs</span>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
