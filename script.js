@@ -37,23 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.value = new Intl.NumberFormat('es-AR').format(value);
         }
     });
-
+//---------------------------------------------------EDITAR DESDE ACÁ----------------------------------------------------------------------------
     const calculadoraTasas = (anio) => {
-        // Usamos los valores decimales directos (5.3% -> 0.053)
-        if (anio === "2222") return 0.12;
-        if (anio >= 2006 && anio <= 2012) return 0.067;
-        if (anio >= 2013 && anio <= 2026) return 0.052; // Incluímos 2026
+        // EJEMPLO: Usamos los valores decimales directos (5.3% -> 0.053)
+        if (anio === "2222") return 0.12; //PORCENTAJE DE PRESTAMOS PERSONALES
+        if (anio >= 2006 && anio <= 2012) return 0.067; //PORCENTAJE DE CUOTAS DESDDE 2006 HASTA 2012
+        if (anio >= 2013 && anio <= 2026) return 0.052; //PORCENTAJE DE CUOTAS DESDDE 2013 HASTA 2026
         return 0;
     }
 
     const calculadoraGastosAdmin = (monto) => {
-        let viaticos = 40000;
-        let escribano = 60000;
-        let gastosdegestoria = 100000;
-        const gastosAdmin = monto * 0.02 + viaticos + escribano + gastosdegestoria;
+        let viaticos = 40000; //VALOR EN PESOS DE VIATICOS NO PONER NI PUNTOS NI COMAS
+        let escribano = 60000; //VALOR EN PESOS DE ESCRIBANO NO PONER NI PUNTOS NI COMAS
+        let gastosdegestoria = 100000; //VALOR EN PESOS DE GASTOS DE GESTON NO PONER NI PUNTOS NI COMAS
+        const gastosAdmin = monto * 0.02 + viaticos + escribano + gastosdegestoria; //ACÁ SE SUMAN TODOS LOS GASTOS ADMINISTRATIVOS
         return gastosAdmin;
     }
-
+//---------------------------------------------------FIN DE SECTOR DE EDICIÓN----------------------------------------------------------------------------
     btn.addEventListener('click', () => {
         const montoLimpio = parseFloat(inputMonto.value.replace(/\./g, ''));
         const cuotas = parseInt(selectCuotas.value);
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
