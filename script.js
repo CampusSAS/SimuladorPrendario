@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const calculadoraTasas = (anio) => {
         // EJEMPLO: Usamos los valores decimales directos (5.3% -> 0.053)
         if (anio === "2222") return 0.12; //PORCENTAJE DE PRESTAMOS PERSONALES
-        if (anio >= 2006 && anio <= 2012) return 0.067; //PORCENTAJE DE CUOTAS DESDDE 2006 HASTA 2012
-        if (anio >= 2013 && anio <= 2026) return 0.0515; //PORCENTAJE DE CUOTAS DESDDE 2013 HASTA 2026
+        if (anio >= 2006 && anio <= 2011) return 0.067; //PORCENTAJE DE CUOTAS DESDDE 2006 HASTA 2012
+        if (anio >= 2012 && anio <= 2026) return 0.051; //PORCENTAJE DE CUOTAS DESDDE 2013 HASTA 2026
         return 0;
     }
 
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
